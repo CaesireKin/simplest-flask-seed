@@ -10,7 +10,7 @@ class Index(Resource):
         return 'Server is running...'
 
 server.apis.add_resource(Index, '/')
-server.apis.add_resource(Ftp, '/files/<path>')
+server.apis.add_resource(Ftp, '/files/<string:path>')
 
 if __name__ == "__main__":
     server.inst.run(host="0.0.0.0", port=5000, debug=True)
